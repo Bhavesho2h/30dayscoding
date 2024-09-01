@@ -1,0 +1,17 @@
+.formClass {
+    height: 100px; 
+    width: 100%;
+    background-color: white;
+    
+}
+.panellight{
+    height: 100px; 
+    width: 100%;
+    background-color: white;
+    
+}
+.paneldark{
+    height: 100px; 
+    width: 100%;
+    background-color: black;
+}

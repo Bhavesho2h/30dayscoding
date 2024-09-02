@@ -7,12 +7,14 @@ import { AuthContext } from './context/ThemeContext';
 import { Dashboard } from './component/Dashboard.js';
 
 function App() {
-    // const [theme,setTheme] = useState('light');
+    const [theme,setTheme] = useState('light');
     const [currentUser, setCurrentUser] = useState(null);
     return (
       <>
-        {/* <ThemeContext.Provider value={theme}>
-          <Page />
+      <AuthContext.Provider value={{currentUser,setCurrentUser}}>
+        <ThemeContext.Provider value={theme}>
+          
+          <Dashboard/>
           <label>
             <input 
             type='checkbox'
@@ -23,9 +25,7 @@ function App() {
             />
             useDarkMode
           </label>
-        </ThemeContext.Provider> */}
-      <AuthContext.Provider value={{currentUser,setCurrentUser}}>
-        <Dashboard/>
+        </ThemeContext.Provider>
       </AuthContext.Provider>
       </>
     );

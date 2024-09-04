@@ -5,13 +5,15 @@ import { ThemeContext } from './context/ThemeContext';
 import { Page } from '../src/component/Page.js'
 import { AuthContext } from './context/ThemeContext';
 import { Dashboard } from './component/Dashboard.js';
+import { FormObject } from './component/topics/reducers/FormObject.js';
 
 function App() {
     const [theme,setTheme] = useState('light');
     const [currentUser, setCurrentUser] = useState(null);
     return (
       <>
-      <AuthContext.Provider value={{currentUser,setCurrentUser}}>
+      <FormObject/>
+      {/* <AuthContext.Provider value={{currentUser,setCurrentUser}}>
         <ThemeContext.Provider value={theme}>
           
           <Dashboard/>
@@ -26,7 +28,7 @@ function App() {
             useDarkMode
           </label>
         </ThemeContext.Provider>
-      </AuthContext.Provider>
+      </AuthContext.Provider> */}
       </>
     );
   }
